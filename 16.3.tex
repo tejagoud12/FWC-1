@@ -1,0 +1,296 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+%\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage[parfill]{parskip}
+\usepackage{hyperref}
+\usepackage{gensymb}
+\usepackage{commath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+%\usepackage{setspace}\doublespacing\pagestyle{plain}
+\def\inputGnumericTable{}
+\usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}
+\usepackage{array}
+\usepackage{amsmath}   % for having text in math mode
+\usepackage{parallel,enumitem}
+\usepackage{listings}
+\lstset{
+language=tex,
+frame=single,
+breaklines=true
+}
+ 
+%Following 2 lines were added to remove the blank page at the beginning
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+%
+%New macro definitions
+\newcounter{matchleft}\newcounter{matchright}
+
+\newenvironment{matchtabular}{%
+  \setcounter{matchleft}{0}%
+  \setcounter{matchright}{0}%
+  \tabularx{\textwidth}{%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchleft}\arabic{matchleft}.}}X%
+    >{\leavevmode\hbox to 1.5em{\stepcounter{matchright}\alph{matchright}.}}X%
+    }%
+}{\endtabularx}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\let\vec\mathbf
+\begin{document}
+\begin{center}
+\enlargethispage{-4cm}
+\title{\textbf{Conic Sections}}
+\date{\vspace{-5ex}} %Not to print date automatically
+\maketitle
+\end{center}
+\setcounter{page}{1}
+\section*{11$^{th}$ Maths - Chapter 11}
+\textbf{Short Answer Type Questions}
+\begin{enumerate}
+\item If the letters of the word ALGORITHM are arranged at random in a row what is the probability the letters GOR must remain together as a unit?
+\item Six new employees, two of whom are married to be assigned six desks that are lined up in a row. lf the assignment of employees to desks is made randomly, what is the probability that the married couple will have nonadjacent desks:
+[Hint: First find the probability that the couple has adjacent desks, and then subtract it from 1.]
+\item Suppose an integer from 1 through 1000 is chosen at random, find the probability that the integer is a multiple of 2 or a multiple of a
+\item An experiment consists of rolling a die until a 2 appears.
+\item How many elements of the sample space correspond to the event that the 2 appears on the $k^{th}$ roll of the die?
+[Hint:(a) First (k-1) rolls have 5 outcomes each and $k^{th}$ rolls should result in 1 outcomes. (b) 1+5+$5^2$+....+$5^{k-1}$].
+\item A die is loaded in such a way that each odd number is twice as likely to occer as each even number. Find P (G), wnere G is the event that a number greater than 3 occurs on a  single rall of the die
+\item In a large metropolitan area, the probabilities are .87,.36,.30 that a family (randomly chosen for a sample survey) owns a colour television set, a block and white television set, or both kinds of sets what is the probability that a family owns either any one or both kinds of ses
+\item  If A and B are mutually exclusive events . P(A)=0.35 and P(B)=0.45 find
+\begin{enumerate}
+\item P(A)
+\item P(B)
+\item P(A$\cup$B)
+\item P(A$\cap$B)
+\item P(A$\cap$B)
+\item (A'$\cap$B')
+\end{enumerate}
+\item A team of medical students doing their intern ship have to assit during sur geries at a city hospital. The probabilities of surgeries rated as very complex. complex, routine, simple or very simple are respectively, 0.15,0.20,0.31,0.26,.08. Find the probabilities that a pariticular surgery will be rated
+\begin{enumerate}
+\item complex or very complex;
+\item neither very complex nor very simple;
+\item routine or complex. 
+\item routine or simple.
+\end{enumerate}
+\item Four candidates A,B,C,D have applied for the assignment to coach a school cricket team .If A is twice as likely to be selected as B, and B, and B and C are given about the same chance of being selected. while C is twice as likely to be selected as D, what are the probabilities that
+\begin{enumerate}
+\item C will be selected ?
+\item A will nat be selected ?
+\end{enumerate}
+\item One of the four persons John, Rita' Aslam or Gurpreet will be promoted next month. consequently the sample space consists of four elementary outcomess=[John promoted, Rita promoted' Aslam promoted' Gurpreet promoted] you are told that the chances of John's promotion is same as that of Gurpreet' Rita's chances of promotion are twice as likely as Johns. A slam' S chances are four times that of John.
+\begin{enumerate}
+\item Determine P (John promoteg)
+  P (Rita promoted)
+P (A slam promoted)
+P (Gurpreet promoted)
+\item If A ={John promoted or Gurpreet promoted} find P(A).
+\end{enumerate}
+\item The accompanying venn diagram shows three events A,B and C, and also the probabilities of the various intersections (for instance. P (A$\cap$B) =0.7).Determine
+\begin{enumerate}
+\item P (A)
+\item P (B$\cap$c)
+\item P (A$\cap$B)
+\item P (A$\cap$B)
+\item P (A$\cap$B)
+\item P (B$\cap$C)
+\end{enumerate}
+\item probability of exactly one of the three occurs.
+\item one urn contains two black balls (labelled B and $B^2$) and one white ball and two white balls (labelled w , and w2). suppose the  following experiment is performed one of the two urns is chosen at random. newt a ball is randomly chosen from the urn. Then a second ball is chosen at random from the some urn without replacing the first ball.
+	\begin{enumerate}
+\item write the sample space showing all possible outcomes.
+\item what is the probability that two black balls are chosen?
+\item what is the probability that two balls of opposite colour are chosen
+	\end{enumerate}
+\item A bag cantains 8 red and 5 white balls Three balls are drawn at random Find the probability that 
+\begin{enumerate}
+\item All the three balls are white
+\item All the three balls are red
+\item one ball is red and two balls are white
+	\end{enumerate}
+\item If the letters of the word ASSASSINATION are arranged at  random. Find the probabiliy that
+\begin{enumerate}
+\item Four 5's come consecutively in the word
+\item Two 1's and two N' S  come together
+\item All A'S are not coming together
+\item No two A's are coming together
+	\end{enumerate}
+\item A card is drawn from a deck of 52 cards Find the probability of getting aking or a heart or a red card.
+\item A sample space consists of a elementary outcomes $e_1,e_2.......e_9$ whose probabilities are 
+\item P($e_1$)=P($e_2$)=0.8,P($e_4$)=P($e_4$)=p($e_5$)=.1
+\item P($e_6$)=p($e_7$)=.2,p($e_9$)=0.7
+suppose A={$e_1,e_5,e_8$}.B={$e_2,e_5,e_8,e_9$}
+\item calculate P (A),P(B),and P (A$\cap$B)
+\item using the addition law of probability .colcuate P (A$\cap$B)
+\item List the compositian of the event A$\cap$B, and calcutate P (A$\cap$B) by adding the probabilities of the elementary outcomes
+\item calcuate P (B) from P (B) , also calculate P (B) directly from the elementary outcomes of B
+\item Determine the probability P, for each of the following events 
+\item An odd number appears in a single toss of a fair bie
+\item At least one head appears in two tosses of a fair coin 
+\item A king ,9 of hearts'or 3 of spades appears in drawing a single card froma well shuffled ordinary deck of 52 cards
+\item The sum of 6 appears in a single toss of a pair of fair dice
+objective Tye Questions
+choose the corrent answer out of four given options in each of the exercises 18to29(M.CQ)
+\item In a non-leap year. theprobability of having 53 tuesdays or 53 wednesdays is
+\begin{enumerate}
+\item $\frac{1}{7}$
+\item $\frac{2}{7}$
+\item $\frac{3}{7}$
+\item none of these
+\end{enumerate}
+\item Three numbers are chosen from 1 to 20- Find the probability that they are not consecutive
+\begin{enumerate}
+\item $\frac{186}{190}$
+\item $\frac{187}{190}$
+\item $\frac{188}{190}$
+\item $\frac{18}{20\cap3}$
+\end{enumerate}
+\item While shuffing a pack of 52 playing carbs, 2 are accidentally dropped. Find the probability that the missing cords to be of different colours.
+\begin{enumerate}
+\item $\frac{29}{52}$
+\item $\frac{1}{2}$
+\item $\frac{26}{51}$
+\item $\frac{27}{51}$
+\end{enumerate}
+\item seven persons are to be seated in a row The probability that two particular persons sit next to each other is
+\begin{enumerate}
+\item $\frac{1}{3}$
+\item $\frac{1}{6}$
+\item $\frac{2}{7}$
+\item $\frac{1}{2}$
+\end{enumerate}
+\item without repetitin of the numbers four digit numbers are  formed with the numbers 0,2,3,5.The probability of such a numbers divisible by 5 is
+\begin{enumerate}
+\item $\frac{1}{5}$
+\item $\frac{4}{5}$
+\item $\frac{1}{30}$
+\item $\frac{5}{9}$
+\end{enumerate}
+\item If A and B are mutually exclusive events' then
+\begin{enumerate}
+\item P(A)$<$P(B)
+\item P(A)$>$P(B)
+\item P(A)$<$P(B)
+\item none of these
+\end{enumerate}
+\item If P (A$\cap$B)=P(A$\cap$B) for any two events A and B, then 
+\begin{enumerate}
+\item P(A)=P(B)
+\item P(A)$>$P(B)
+\item P(A)$<$P(B)
+\item none of these
+\end{enumerate}
+\item 6 boys and 6 girls sit in a row at random. The probability that all the girls sit together is
+\begin{enumerate}
+\item $\frac{1}{432}$
+\item $\frac{12}{431}$
+\item $\frac{1}{132}$
+\item none of these
+\end{enumerate}
+\item A single letter is selected at random from the word 'PROBABILITY', The probability that it is a vowel is
+\begin{enumerate}
+\item $\frac{1}{3}$
+\item $\frac{4}{11}$
+\item $\frac{2}{11}$
+\item $\frac{3}{11}$
+\end{enumerate}
+\item If the probabilities for A to fail in an examination is 0.2 and that for B is 0., then the probability that either A or B fails is
+\begin{enumerate}
+\item $>$ 5 
+\item .5
+\item $<$.5
+\item 0
+\end{enumerate}
+\item The probability that at least one of the events A and B occurs is 0.6 If A and B occur simultaneously with probability 0.2' then P(A)+P(B) is 
+\begin{enumerate}
+\item 0.4
+\item 0.8
+\item 1.2
+\item 1.6
+\end{enumerate}
+\item If m and N are any two events, the probability that at least one of them occurs is
+\begin{enumerate}
+\item P(m)+P(N)-2 P (m$\cap$N)
+\item P(m)+P(N)-P(M$\cap$N)
+\item P(m)+P(N)+P(m$\cap$N)
+\end{enumerate}
+\item The probability that a person visiting a 200 will see the giraffee is 0-72. the probability that he will see the bears is 0.84 and the probability that he will see both is 0.52.
+\item The probability that a student will pass his examination is 0.73, the probability of the student getting a compartment is 0,13, and the probability that the student will cither pass or get compartment is 0.96.
+\item The probabilitiesthat a typist will make 0,1,2,3,4,5 or more mistakes in typing areport are, respectively, 0.12,0,25,0.36, 0.14.0.08,0.11.
+\item If A and B are two candidates seeking admission in an engineering college. The probability that both A and B are selected is at most. 3 ls it possible that the probility of B getting selected is0.7 ?
+\item The probability of intersection of two events A and B is always less than or equal to those favourable to the evant A
+\item The probability of an occurrence of event A is.7 and that of the occurrence of event B is 3. and the probability of occurrence of both is 4.
+\item The sum of probabilities of two students getting distinction in their final examinations is 1.2. 
+Fill in the blanks in the exercises 37 to 41. 
+\item The probabliity that the home team will win an upcoming footboll game is 0.77, the probability that it will tie the game is 0.08, and the probability that it will lose the game is     
+\item If $e_1 ,e_2, e_3, e_4$ are the four elementary out comes in a sample space and P (e,)=.1 'P ($e_3$)=.1, then the probability of e4 is
+\item Let s ={1.2,3,4,5,6} and E={11,3,5}, then E is
+\item If A and B are two events associated  with a rondom experiment such that P (A)=0.3, P(B)=0.2 and P (A$\cap$B)=0.1 then the value of P (A$\cap$B) is
+\item The probability of happening of an event A is 0.5 and that of B is 0.3 lf A and B are mutually exclusive events, then the probability of neither A nor B is
+\item match the proposed probability under column c, with the appropriate written descripitio under column $c_2$
+\begin{enumerate}[resume]
+\item 
+\begin{center}
+\begin{tabular}{cccccc}
+\textbf{Column $C_1$} & & & & &  \textbf{Column $C_2$}\\
+\end{tabular}   
+\end{center}
+\begin{matchtabular}
+  The coordinates of the points P and Q on the line x + 5y = 13 which are at a distance of 2 units from the line 12x – 5y + 26 = 0 are & (3,1),(-7,11)\\
+  The coordinates of the point on the line x + y = 4, which are at a unit distance from the line 4x + 3y – 10 = 0 are & $-\frac{1}{11},\frac{11}{3}$ , $\frac{4}{3},\frac{7}{3}$\\
+  The coordinates of the point on the line joining A (–2, 5) and B (3, 1) such that AP = PQ = QB are & 1,$\frac{12}{5}$ , $-3,\frac{16}{5}$\\
+\end{matchtabular}
+\\	
+\item 
+\begin{center}
+\begin{tabular}{cccccc}
+\textbf{Column $C_1$} & & & & &  \textbf{Column $C_2$}\\
+\end{tabular}   
+\end{center}
+\begin{matchtabular}
+  0.95  & An incorrent assignmet\\
+  0.02  & No chance of happening\\
+  -0.3   & As much chance of happening as not\\    
+  0.5    & Very likely to happen\\
+  0       & Very little chance of happening\\      
+\end{matchtabular}	
+\\
+\item 
+\begin{center}
+\begin{tabular}{cccccc}
+\textbf{Column $C_1$} & & & & &  \textbf{Column $C_2$}\\
+\end{tabular}   
+\end{center}
+\begin{matchtabular}
+If $E_1$, and $E_2$ are the two mutually exclusive evets  & \\ $E_1\cap E_2=E_1$
+If $E_1$, and $E_2$ are the two mutually exclusive events &\\ $(E_1,-E_2)\cap (E_1,\cap E_2)=E_1$
+If $E_1$, and $E_2$ have common out comes, then &\\ $E_1,\cap E_2=\O,E_1,\cap E_2=S$
+If $E_1$, and $E_2$ are two events such that $E_1 ,E_2\\ E_1,\cap E_2=\O$
+\end{matchtabular}
+\\
+\end{enumerate}
+\end{enumerate}
+\end{document}
